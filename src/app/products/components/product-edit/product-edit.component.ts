@@ -1,12 +1,12 @@
-import { Component, OnInit } from "@angular/core";
-import { ProductService } from "../../services/product.service";
-import { Product } from "../../models/product";
-import { ActivatedRoute, Router } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../../services/product.service';
+import { Product } from '../../models/product';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: "app-product-edit",
-  templateUrl: "./product-edit.component.html",
-  styleUrls: ["./product-edit.component.scss"]
+  selector: 'app-product-edit',
+  templateUrl: './product-edit.component.html',
+  styleUrls: ['./product-edit.component.scss']
 })
 export class ProductEditComponent implements OnInit {
   constructor(
@@ -18,14 +18,14 @@ export class ProductEditComponent implements OnInit {
 
   ngOnInit() {
     this.service
-      .getProduct(this.route.snapshot.paramMap.get("id"))
+      .getProduct(this.route.snapshot.paramMap.get('id'))
       .subscribe(product => (this.model = product));
   }
 
   onSubmit() {
     const productObserver = {
       next: product => {
-        this.router.navigate(["/product/list"]), console.log("success");
+        this.router.navigate(['/product/list']), console.log('success');
       },
       error: err => console.error(err)
     };

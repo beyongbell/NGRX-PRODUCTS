@@ -79,14 +79,6 @@
       "price": "457.00",
       "imageUrl": "https://source.unsplash.com/1600x900/?product",
       "quantity": 76400
-    },
-    {
-      "name": "1212",
-      "description": "123",
-      "price": "12",
-      "quantity": 12,
-      "imageUrl": "https://via.placeholder.com/1600x900",
-      "id": 11
     }
   ]
 }
